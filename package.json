@@ -1,0 +1,25 @@
+{
+  "name": "article-json-to-amp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "semistandard | snazzy",
+    "test": "tape test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micnews/article-json-to-amp.git"
+  },
+  "author": "mic.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micnews/article-json-to-amp/issues"
+  },
+  "homepage": "https://github.com/micnews/article-json-to-amp#readme",
+  "devDependencies": {
+    "semistandard": "^7.0.2",
+    "snazzy": "^2.0.1",
+    "tape": "^4.2.0"
+  }
+}
