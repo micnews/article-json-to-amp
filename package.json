@@ -7,7 +7,8 @@
     "lint": "semistandard | snazzy",
     "test": "ava && npm run lint",
     "build": "babel lib --out-dir dist",
-    "watch": "babel lib --out-dir dist --watch"
+    "watch": "babel lib --out-dir dist --watch",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
