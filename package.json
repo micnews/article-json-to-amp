@@ -27,7 +27,6 @@
     "babel-preset-es2015": "^6.3.13",
     "semistandard-deku": "github:micnews/semistandard#deku",
     "snazzy": "^2.0.1",
-    "tape": "^4.2.0",
     "tsml": "^1.0.1"
   },
   "dependencies": {
