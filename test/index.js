@@ -61,3 +61,37 @@ test('embeds', t => {
     </article>`
   );
 });
+
+test('image with caption', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'image',
+    src: 'http://example.com/image.jpg',
+    width: 600,
+    height: 200,
+    caption: [{
+      type: 'text',
+      content: 'Source: ',
+      href: null,
+      italic: false,
+      bold: false
+    }, {
+      type: 'text',
+      content: 'Author',
+      href: 'http://example.com/author',
+      italic: false,
+      bold: false
+    }]
+  }];
+
+  console.log(toAmp(data));
+
+  t.is(toAmp(data), tsml
+    `<article>
+      <figure>
+        <amp-img width="600" height="200" layout="responsive" src="http://example.com/image.jpg"></amp-img>
+        <figcaption>Source: <a href="http://example.com/author">Author</a></figcaption>
+      </figure>
+    </article>`
+  );
+});
