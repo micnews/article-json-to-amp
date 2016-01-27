@@ -1,5 +1,5 @@
 ## article-json-to-amp
-Render article in the AMP format
+Render article in the [AMP](https://github.com/ampproject/amphtml) format
 
 ## Usage
 
