@@ -52,6 +52,10 @@ outputs:
 </article>
 ```
 
+### Input format
+
+https://github.com/micnews/html-to-article-json#format
+
 ### Rendering HTML articles
 
 HTML article can be parsed into structured format expected by this module using [html-to-article-json](https://github.com/micnews/html-to-article-json).
