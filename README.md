@@ -1,5 +1,5 @@
 ## article-json-to-amp
-Render article in the [AMP](https://github.com/ampproject/amphtml) format
+Render [article json](https://github.com/micnews/html-to-article-json#format) format in the [AMP](https://github.com/ampproject/amphtml) format
 
 ## Usage
 
