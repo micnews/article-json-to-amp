@@ -142,3 +142,17 @@ test('custom secure iframe', t => {
     </article>`
   );
 });
+
+test('custom non-secure iframe', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'custom',
+    src: 'http://example.com/frame',
+    width: 600,
+    height: 200,
+    secure: false,
+    caption: []
+  }];
+
+  t.is(toAmp(data), `<article><figure></figure></article>`);
+});
