@@ -23,7 +23,7 @@ test('paragraphs', t => {
     `<article>
       <p>
         <a href="http://mic.com">link</a>
-        <br></br>
+        <br/>
         normal text<b>bold text</b><i>italic text</i>
       </p>
       <p>other text</p>
@@ -84,8 +84,6 @@ test('image with caption', t => {
     }]
   }];
 
-  console.log(toAmp(data));
-
   t.is(toAmp(data), tsml
     `<article>
       <figure>
@@ -94,4 +92,67 @@ test('image with caption', t => {
       </figure>
     </article>`
   );
+});
+
+test('blockquote', t => {
+  const data = [{
+    type: 'blockquote',
+    children: [{
+      type: 'paragraph',
+      children: [{
+        type: 'text',
+        content: 'abc'
+      }]
+    }, {
+      type: 'paragraph',
+      children: [{
+        type: 'text',
+        content: 'def',
+        bold: true
+      }]
+    }]
+  }];
+
+  t.is(toAmp(data), tsml
+    `<article>
+      <blockquote>
+        <p>abc</p>
+        <p><b>def</b></p>
+      </blockquote>
+    </article>`
+  );
+});
+
+test('custom secure iframe', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'custom',
+    src: 'https://example.com/frame',
+    width: 600,
+    height: 200,
+    secure: true,
+    caption: []
+  }];
+
+  t.is(toAmp(data), tsml
+    `<article>
+      <figure>
+        <amp-iframe width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
+      </figure>
+    </article>`
+  );
+});
+
+test('custom non-secure iframe', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'custom',
+    src: 'http://example.com/frame',
+    width: 600,
+    height: 200,
+    secure: false,
+    caption: []
+  }];
+
+  t.is(toAmp(data), `<article><figure></figure></article>`);
 });
