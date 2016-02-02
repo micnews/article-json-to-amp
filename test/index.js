@@ -10,12 +10,19 @@ test('paragraphs', t => {
       { type: 'linebreak' },
       { type: 'text', content: 'normal text' },
       { type: 'text', bold: true, content: 'bold text' },
-      { type: 'text', italic: true, content: 'italic text' }
+      { type: 'text', italic: true, content: 'italic text' },
+      { type: 'text', mark: true, content: 'marked text' },
+      { type: 'text', mark: true, markClass: 'marker1' }
     ]
   }, {
     type: 'paragraph',
     children: [
       { type: 'text', content: 'other text' }
+    ]
+  }, {
+    type: 'paragraph',
+    children: [
+      { type: 'text', mark: true }
     ]
   }];
 
@@ -25,8 +32,11 @@ test('paragraphs', t => {
         <a href="http://mic.com">link</a>
         <br/>
         normal text<b>bold text</b><i>italic text</i>
+        <mark>marked text</mark>
+        <mark class="marker1"></mark>
       </p>
       <p>other text</p>
+      <p><mark></mark></p>
     </article>`
   );
 });
