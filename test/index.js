@@ -2,7 +2,7 @@ import test from 'ava';
 import tsml from 'tsml';
 import toAmp from '../dist';
 
-test('paragraphs', t => {
+test('blocks', t => {
   const data = [{
     type: 'paragraph',
     children: [
@@ -18,6 +18,11 @@ test('paragraphs', t => {
     type: 'paragraph',
     children: [
       { type: 'text', content: 'other text' }
+    ]
+  }, {
+    type: 'header3',
+    children: [
+      { type: 'text', content: 'header text' }
     ]
   }, {
     type: 'paragraph',
@@ -36,7 +41,41 @@ test('paragraphs', t => {
         <mark class="marker1"></mark>
       </p>
       <p>other text</p>
+      <h3>header text</h3>
       <p><mark></mark></p>
+    </article>`
+  );
+});
+
+test('headers', t => {
+  const data = [{
+    type: 'header1',
+    children: [{ type: 'text', content: 'header1' }]
+  }, {
+    type: 'header2',
+    children: [{ type: 'text', content: 'header2' }]
+  }, {
+    type: 'header3',
+    children: [{ type: 'text', content: 'header3' }]
+  }, {
+    type: 'header4',
+    children: [{ type: 'text', content: 'header4' }]
+  }, {
+    type: 'header5',
+    children: [{ type: 'text', content: 'header5' }]
+  }, {
+    type: 'header6',
+    children: [{ type: 'text', content: 'header6' }]
+  }];
+
+  t.is(toAmp(data), tsml
+    `<article>
+      <h1>header1</h1>
+      <h2>header2</h2>
+      <h3>header3</h3>
+      <h4>header4</h4>
+      <h5>header5</h5>
+      <h6>header6</h6>
     </article>`
   );
 });
