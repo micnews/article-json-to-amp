@@ -1,6 +1,7 @@
 import test from 'ava';
 import tsml from 'tsml';
-import toAmp from '../dist';
+import 'babel-core/register';
+import toAmp from '../lib';
 
 test('blocks', t => {
   const data = [{
