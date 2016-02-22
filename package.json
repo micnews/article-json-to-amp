@@ -31,6 +31,7 @@
     "tsml": "^1.0.1"
   },
   "dependencies": {
+    "article-json-html-render": "^1.0.0",
     "deku": "^2.0.0-rc15"
   }
 }
