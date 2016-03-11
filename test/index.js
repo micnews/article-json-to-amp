@@ -193,6 +193,26 @@ test('custom secure iframe', t => {
   );
 });
 
+test('custom relative-url secure iframe', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'custom',
+    src: '//example.com/frame',
+    width: 600,
+    height: 200,
+    secure: true,
+    caption: []
+  }];
+
+  t.is(toAmp(data), tsml
+    `<article>
+      <figure>
+        <amp-iframe width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
+      </figure>
+    </article>`
+  );
+});
+
 test('custom non-secure iframe', t => {
   const data = [{
     type: 'embed',
