@@ -1,3 +1,5 @@
+// Should work with window object defined in node
+import './helpers/set-window';
 import test from 'ava';
 import tsml from 'tsml';
 import 'babel-core/register';
