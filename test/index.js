@@ -104,6 +104,11 @@ test('embeds', t => {
     embedType: 'spotify',
     url: 'https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf',
     height: 80
+  }, {
+    type: 'embed',
+    embedType: 'spotify',
+    url: 'https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf',
+    height: 380
   }];
 
   t.is(toAmp(data), tsml
@@ -114,6 +119,9 @@ test('embeds', t => {
       </figure>
       <figure>
         <amp-img width="600" height="200" layout="responsive" src="http://example.com/image.jpg"></amp-img>
+      </figure>
+      <figure>
+        <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
       </figure>
       <figure>
         <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
