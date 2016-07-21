@@ -109,6 +109,23 @@ test('embeds', t => {
     embedType: 'spotify',
     url: 'https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf',
     height: 380
+  }, {
+    type: 'embed',
+    caption: [],
+    embedType: 'tumblr',
+    did: '7c08ba46cb75162284770cdee2a59365891a5e18',
+    url: 'https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392',
+    text: [{
+      content: 'http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento',
+      href: 'http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento'
+    }]
+  }, {
+    type: 'embed',
+    caption: [],
+    embedType: 'tumblr',
+    did: '7c08ba46cb75162284770cdee2a59365891a5e18',
+    url: 'https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392',
+    text: []
   }];
 
   t.is(toAmp(data), tsml
@@ -125,6 +142,12 @@ test('embeds', t => {
       </figure>
       <figure>
         <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
+      </figure>
+      <figure>
+        <a target="_blank" class="tumblr-post" href="http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento">Load Tumblr post in new window</a>
+      </figure>
+      <figure>
+        <a target="_blank" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">Load Tumblr post in new window</a>
       </figure>
     </article>`
   );
