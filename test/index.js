@@ -144,10 +144,10 @@ test('embeds', t => {
         <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
       </figure>
       <figure>
-        <a target="_blank" class="tumblr-post" href="http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento">Load Tumblr post in new window</a>
+        <a target="_blank" class="tumblr-post" href="http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento">http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento</a>
       </figure>
       <figure>
-        <a target="_blank" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">Load Tumblr post in new window</a>
+        <a target="_blank" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392</a>
       </figure>
     </article>`
   );
