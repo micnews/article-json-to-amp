@@ -1,4 +1,5 @@
 const convertToAmp = require('./');
+
 const article = [
   {
     type: 'paragraph',
@@ -28,4 +29,4 @@ const article = [
   }
 ];
 
-console.log(convertToAmp(article));
+console.log(convertToAmp(article)); // eslint-disable-line
