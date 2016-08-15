@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/imports-first */
+
 // Should work with window object defined in node
 import './helpers/set-window';
 import test from 'ava';
@@ -34,8 +37,7 @@ test('blocks', t => {
     ]
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <p>
         <a href="http://mic.com">link</a>
         <br/>
@@ -71,8 +73,7 @@ test('headers', t => {
     children: [{ type: 'text', content: 'header6' }]
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <h1>header1</h1>
       <h2>header2</h2>
       <h3>header3</h3>
@@ -128,8 +129,7 @@ test('embeds', t => {
     text: []
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <p>normal text</p>
       <figure>
         <amp-youtube data-videoid="abc" layout="responsive" width="480" height="270"></amp-youtube>
@@ -144,10 +144,10 @@ test('embeds', t => {
         <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
       </figure>
       <figure>
-        <a target="_blank" class="tumblr-post" href="http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento">http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento</a>
+        <a target="_blank" rel="noopener noreferrer" class="tumblr-post" href="http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento">http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento</a>
       </figure>
       <figure>
-        <a target="_blank" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392</a>
+        <a target="_blank" rel="noopener noreferrer" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392</a>
       </figure>
     </article>`
   );
@@ -175,8 +175,7 @@ test('image with caption', t => {
     }]
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <figure>
         <amp-img width="600" height="200" layout="responsive" src="http://example.com/image.jpg"></amp-img>
         <figcaption>Source: <a href="http://example.com/author">Author</a></figcaption>
@@ -204,8 +203,7 @@ test('blockquote', t => {
     }]
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <blockquote>
         <p>abc</p>
         <p><b>def</b></p>
@@ -225,8 +223,7 @@ test('custom secure iframe', t => {
     caption: []
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <figure>
         <amp-iframe width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
       </figure>
@@ -245,8 +242,7 @@ test('custom relative-url secure iframe', t => {
     caption: []
   }];
 
-  t.is(toAmp(data), tsml
-    `<article>
+  t.is(toAmp(data), tsml`<article>
       <figure>
         <amp-iframe width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
       </figure>
@@ -265,5 +261,5 @@ test('custom non-secure iframe', t => {
     caption: []
   }];
 
-  t.is(toAmp(data), `<article><figure></figure></article>`);
+  t.is(toAmp(data), '<article><figure></figure></article>');
 });
