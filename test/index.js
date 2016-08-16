@@ -112,6 +112,12 @@ test('embeds', t => {
   }, {
     type: 'embed',
     caption: [],
+    embedType: 'tidal',
+    dataId: '123456789',
+    dataType: 'v'
+  }, {
+    type: 'embed',
+    caption: [],
     embedType: 'tumblr',
     did: '7c08ba46cb75162284770cdee2a59365891a5e18',
     url: 'https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392',
@@ -142,6 +148,9 @@ test('embeds', t => {
       </figure>
       <figure>
         <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
+      </figure>
+      <figure>
+        <a target="_blank" class="tidal-embed" href="https://listen.tidal.com/video/123456789">https://listen.tidal.com/video/123456789</a>
       </figure>
       <figure>
         <a target="_blank" class="tumblr-post" href="http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento">http://jencita.tumblr.com/post/147291233392/tswiftdaily-taylor-swift-at-lady-cilento</a>
