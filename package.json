@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/micnews/article-json-to-amp#readme",
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.16.0",
     "babel-cli": "^6.4.5",
     "babel-core": "^6.5.2",
     "babel-plugin-transform-react-jsx": "^6.4.0",
