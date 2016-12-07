@@ -276,3 +276,24 @@ test('custom non-secure iframe', t => {
 
   t.is(toAmp(data), `<article><figure></figure></article>`);
 });
+
+test('ad', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'ad',
+    network: 'doubleclick',
+    width: 300,
+    height: 250,
+    slot: '123456/commander-keen'
+  }];
+
+  const actual = toAmp(data);
+  const expected = tsml`
+    <article>
+      <figure>
+        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen"></amp-ad>
+      </figure>
+    </article>`;
+
+  t.is(actual, expected);
+});
