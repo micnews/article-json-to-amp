@@ -284,14 +284,19 @@ test('ad', t => {
     network: 'doubleclick',
     width: 300,
     height: 250,
-    slot: '123456/commander-keen'
+    slot: '123456/commander-keen',
+    json: {
+      targeting: {
+        aSlot: '0'
+      }
+    }
   }];
 
   const actual = toAmp(data);
   const expected = tsml`
     <article>
       <figure>
-        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen"></amp-ad>
+        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json="{"targeting":{"aSlot":"0"}}"></amp-ad>
       </figure>
     </article>`;
 
