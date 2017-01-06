@@ -285,14 +285,15 @@ test('ad', t => {
     width: 300,
     height: 250,
     slot: '123456/commander-keen',
-    json: {targeting: {aSlot: '0'}}
+    json: {targeting: {aSlot: '0'}},
+    dataMultiSize: '300x250'
   }];
 
   const actual = toAmp(data);
   const expected = tsml`
     <article>
       <figure>
-        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json='{"targeting":{"aSlot":"0"}}'></amp-ad>
+        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json='{"targeting":{"aSlot":"0"}}' data-multi-size="300x250"></amp-ad>
       </figure>
     </article>`;
 
