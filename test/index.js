@@ -286,7 +286,8 @@ test('ad', t => {
     height: 250,
     slot: '123456/commander-keen',
     json: {targeting: {aSlot: '0'}},
-    dataMultiSize: '300x250'
+    multiSize: '300x250',
+    multiSizeValidation: 'false'
   }];
 
   const actual = toAmp(data);
