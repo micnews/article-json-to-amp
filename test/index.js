@@ -287,14 +287,15 @@ test('ad', t => {
     slot: '123456/commander-keen',
     json: {targeting: {aSlot: '0'}},
     multiSize: '300x250',
-    multiSizeValidation: 'false'
+    multiSizeValidation: 'false',
+    layout: 'responsive'
   }];
 
   const actual = toAmp(data);
   const expected = tsml`
     <article>
       <figure>
-        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json='{"targeting":{"aSlot":"0"}}' data-multi-size="300x250" data-multi-size-validation="false"></amp-ad>
+        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json='{"targeting":{"aSlot":"0"}}' data-multi-size="300x250" data-multi-size-validation="false" layout="responsive"></amp-ad>
       </figure>
     </article>`;
 
