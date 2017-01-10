@@ -1,6 +1,6 @@
 {
   "name": "article-json-to-amp",
-  "version": "1.10.4",
+  "version": "1.10.5",
   "description": "Render JSON formatted article in the AMP format",
   "main": "dist/index.js",
   "scripts": {
