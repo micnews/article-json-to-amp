@@ -295,6 +295,7 @@ test('ad', t => {
   const expected = tsml`
     <article>
       <figure>
+        <h6 class="label--sponsorship">Sponsored</h6>
         <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json='{"targeting":{"aSlot":"0"}}' data-multi-size="300x250" data-multi-size-validation="false" layout="responsive"></amp-ad>
       </figure>
     </article>`;
