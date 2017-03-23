@@ -302,3 +302,30 @@ test('ad', t => {
 
   t.is(actual, expected);
 });
+
+test('ad with custom label', t => {
+  const data = [{
+    type: 'embed',
+    embedType: 'ad',
+    network: 'doubleclick',
+    width: 300,
+    height: 250,
+    slot: '123456/commander-keen',
+    json: {targeting: {aSlot: '0'}},
+    multiSize: '300x250',
+    multiSizeValidation: 'false',
+    layout: 'responsive',
+    label: 'advertisement'
+  }];
+
+  const actual = toAmp(data);
+  const expected = tsml`
+    <article>
+      <figure>
+        <h6 class="label--sponsorship">advertisement</h6>
+        <amp-ad width="300" height="250" type="doubleclick" data-slot="123456/commander-keen" json='{"targeting":{"aSlot":"0"}}' data-multi-size="300x250" data-multi-size-validation="false" layout="responsive"></amp-ad>
+      </figure>
+    </article>`;
+
+  t.is(actual, expected);
+});
