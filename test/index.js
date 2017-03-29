@@ -132,6 +132,20 @@ test('embeds', t => {
     did: '7c08ba46cb75162284770cdee2a59365891a5e18',
     url: 'https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392',
     text: []
+  }, {
+    type: 'embed',
+    embedType: 'twitter',
+    text: [
+      {content: 'GIF vs. JIF… This ', href: null},
+      {content: 'pic.twitter.com/qFAHWgdbL6', href: 'https://t.co/qFAHWgdbL6'}
+    ],
+    url: 'https://twitter.com/MattNavarra/status/684690494841028608',
+    date: 'January 6, 2016',
+    user: {
+      slug: 'MattNavarra',
+      name: 'Matt (foo) Navarra'
+    },
+    id: '684690494841028608'
   }];
 
   t.is(toAmp(data), tsml
@@ -157,6 +171,9 @@ test('embeds', t => {
       </figure>
       <figure>
         <a target="_blank" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392</a>
+      </figure>
+      <figure>
+        <amp-twitter width=\"486\" height=\"657\" layout=\"responsive\" data-tweetid=\"684690494841028608\"></amp-twitter>
       </figure>
     </article>`
   );
