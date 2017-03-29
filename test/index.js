@@ -158,10 +158,10 @@ test('embeds', t => {
         <amp-img width="600" height="200" layout="responsive" src="http://example.com/image.jpg"></amp-img>
       </figure>
       <figure>
-        <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
+        <amp-iframe sandbox="allow-scripts allow-same-origin" width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
       </figure>
       <figure>
-        <amp-iframe width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
+        <amp-iframe sandbox="allow-scripts allow-same-origin" width="auto" height="80" layout="fixed-height" frameborder="0" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf"></amp-iframe>
       </figure>
       <figure>
         <a target="_blank" class="tidal-embed" href="https://listen.tidal.com/video/123456789">https://listen.tidal.com/video/123456789</a>
@@ -254,7 +254,7 @@ test('custom secure iframe', t => {
   t.is(toAmp(data), tsml
     `<article>
       <figure>
-        <amp-iframe width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
+        <amp-iframe sandbox="allow-scripts allow-same-origin" width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
       </figure>
     </article>`
   );
@@ -274,7 +274,7 @@ test('custom relative-url secure iframe', t => {
   t.is(toAmp(data), tsml
     `<article>
       <figure>
-        <amp-iframe width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
+        <amp-iframe sandbox="allow-scripts allow-same-origin" width="600" height="200" layout="responsive" frameborder="0" src="https://example.com/frame"></amp-iframe>
       </figure>
     </article>`
   );
