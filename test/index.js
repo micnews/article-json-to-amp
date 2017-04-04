@@ -173,7 +173,7 @@ test('embeds', t => {
         <a target="_blank" class="tumblr-post" href="https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392">https://embed.tumblr.com/embed/post/8_SX4ALNOf1fYyEcjq78YQ/147291233392</a>
       </figure>
       <figure>
-        <amp-twitter width=\"486\" height=\"657\" layout=\"responsive\" data-tweetid=\"684690494841028608\"></amp-twitter>
+        <amp-twitter width=\"auto\" height=\"1\" layout=\"fixed-height\" data-tweetid=\"684690494841028608\"></amp-twitter>
       </figure>
     </article>`
   );
